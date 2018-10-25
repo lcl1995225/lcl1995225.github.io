@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.imlcl.cn/"/>
-  <updated>2018-10-25T06:36:15.232Z</updated>
+  <updated>2018-10-24T19:17:07.607Z</updated>
   <id>http://www.imlcl.cn/</id>
   
   <author>
@@ -15,26 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>test123</title>
-    <link href="http://www.imlcl.cn/2018/10/25/test123/"/>
-    <id>http://www.imlcl.cn/2018/10/25/test123/</id>
-    <published>2018-10-24T19:50:00.000Z</published>
-    <updated>2018-10-25T06:36:15.232Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="good"><a href="#good" class="headerlink" title="good"></a>good</h2><h5 id="note"><a href="#note" class="headerlink" title="note"></a>note</h5><a id="more"></a><p><img src="/2018/10/25/test123/pic2.jpg" alt="aaaa"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;good&quot;&gt;&lt;a href=&quot;#good&quot; class=&quot;headerlink&quot; title=&quot;good&quot;&gt;&lt;/a&gt;good&lt;/h2&gt;&lt;h5 id=&quot;note&quot;&gt;&lt;a href=&quot;#note&quot; class=&quot;headerlink&quot; title=&quot;note&quot;&gt;&lt;/a&gt;note&lt;/h5&gt;
-    
-    </summary>
-    
-      <category term="python" scheme="http://www.imlcl.cn/categories/python/"/>
-    
-    
-  </entry>
   
   <entry>
     <title>Hello World</title>
