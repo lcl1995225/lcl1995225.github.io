@@ -81,13 +81,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Lcl&#39;s Blog">
-<meta property="og:url" content="http://www.imlcl.cn/index.html">
+<meta name="description" content="备注：教程均为网上收集，经过修改与整理使得更加符合LCL的阅读习惯。Lcl的习惯：章节号##，副标题###，其他事项#### 本教程总共分为以下几个部分：第一部分：使用urllib发送和处理简单请求第二部分：urllib+selenium利用cookie第三部分：beautifulSoup与正则表达式第四部分：高级爬虫（分布式与框架初探)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python爬虫笔记（一）_使用urllib发送和处理简单请求">
+<meta property="og:url" content="http://www.imlcl.cn/2018/10/25/Python爬虫笔记（一）-使用urllib发送和处理简单请求/index.html">
 <meta property="og:site_name" content="Lcl&#39;s Blog">
+<meta property="og:description" content="备注：教程均为网上收集，经过修改与整理使得更加符合LCL的阅读习惯。Lcl的习惯：章节号##，副标题###，其他事项#### 本教程总共分为以下几个部分：第一部分：使用urllib发送和处理简单请求第二部分：urllib+selenium利用cookie第三部分：beautifulSoup与正则表达式第四部分：高级爬虫（分布式与框架初探)">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-10-25T13:07:42.727Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lcl&#39;s Blog">
+<meta name="twitter:title" content="Python爬虫笔记（一）_使用urllib发送和处理简单请求">
+<meta name="twitter:description" content="备注：教程均为网上收集，经过修改与整理使得更加符合LCL的阅读习惯。Lcl的习惯：章节号##，副标题###，其他事项#### 本教程总共分为以下几个部分：第一部分：使用urllib发送和处理简单请求第二部分：urllib+selenium利用cookie第三部分：beautifulSoup与正则表达式第四部分：高级爬虫（分布式与框架初探)">
 
 
 
@@ -117,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://www.imlcl.cn/">
+  <link rel="canonical" href="http://www.imlcl.cn/2018/10/25/Python爬虫笔记（一）-使用urllib发送和处理简单请求/">
 
 
 
 
 
-  <title>Lcl's Blog</title>
+  <title>Python爬虫笔记（一）_使用urllib发送和处理简单请求 | Lcl's Blog</title>
   
 
 
@@ -142,8 +146,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -268,9 +271,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -300,9 +303,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/25/Python爬虫笔记（一）-使用urllib发送和处理简单请求/" itemprop="url">Python爬虫笔记（一）_使用urllib发送和处理简单请求</a></h2>
+          <h2 class="post-title" itemprop="name headline">Python爬虫笔记（一）_使用urllib发送和处理简单请求</h2>
         
 
         <div class="post-meta">
@@ -374,17 +375,28 @@
       
 
       
-        
-          <p>备注：教程均为网上收集，经过修改与整理使得更加符合LCL的阅读习惯。<br>Lcl的习惯：章节号##，副标题###，其他事项####</p>
-<p>本教程总共分为以下几个部分：<br>第一部分：使用urllib发送和处理简单请求<br>第二部分：urllib+selenium利用cookie<br>第三部分：beautifulSoup与正则表达式<br>第四部分：高级爬虫（分布式与框架初探)<br></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/10/25/Python爬虫笔记（一）-使用urllib发送和处理简单请求/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <p>备注：教程均为网上收集，经过修改与整理使得更加符合LCL的阅读习惯。<br>Lcl的习惯：章节号##，副标题###，其他事项####</p>
+<p>本教程总共分为以下几个部分：<br>第一部分：使用urllib发送和处理简单请求<br>第二部分：urllib+selenium利用cookie<br>第三部分：beautifulSoup与正则表达式<br>第四部分：高级爬虫（分布式与框架初探)<br><a id="more"></a></p>
+<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><h3 id="利用urllib进行简单的网页抓取"><a href="#利用urllib进行简单的网页抓取" class="headerlink" title="利用urllib进行简单的网页抓取"></a>利用urllib进行简单的网页抓取</h3><h4 id="核心代码"><a href="#核心代码" class="headerlink" title="核心代码"></a>核心代码</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"><span class="keyword">import</span> chardet</span><br><span class="line">response = request.urlopen(<span class="string">"https://www.163.com/"</span>)</span><br><span class="line">html = response.read()<span class="comment">#读取出来的是bytes</span></span><br><span class="line">charset = chardet.detect(html)</span><br><span class="line">html = html.decode(charset[<span class="string">'encoding'</span>],errors=<span class="string">'ignore'</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="新内容解释"><a href="#新内容解释" class="headerlink" title="新内容解释"></a>新内容解释</h4><h5 id="1、chardet："><a href="#1、chardet：" class="headerlink" title="1、chardet："></a>1、chardet：</h5><p>为第三方模块，可以检测byte的编码，若使用Anaconda，则已经自带，该模块可以用来自动判断网页编码的类型。<br>该模块在实际使用时偶尔会碰到问题，即无法检测部分网页的编码，如<a href="https://www.qq.com" target="_blank" rel="noopener">腾讯主页</a></p>
+<h5 id="2、什么时候使用encode，什么时候使用decode"><a href="#2、什么时候使用encode，什么时候使用decode" class="headerlink" title="2、什么时候使用encode，什么时候使用decode?"></a>2、什么时候使用encode，什么时候使用decode?</h5><p>str—&gt;(encode，编码)—&gt;bytes（二进制）<br>bytes（二进制）—&gt;(decode，解码)—&gt;str<br>助记：将字符编码为计算机理解的二进制语言。<br>举例：<br>str(小明abc）—&gt;str.encode(‘utf-8’,errors=’ignore’)—&gt;bytes（b’\xe5\xb0\x8f\xe6\x98\x8eabc’ 小明abc）<br>bytes（b’\xe5\xb0\x8f\xe6\x98\x8eabc’ 小明abc）—&gt;str.decode(‘utf-8’,errors=’ignore’)—&gt;str(小明abc）</p>
+<h4 id="练习：文件编码转换"><a href="#练习：文件编码转换" class="headerlink" title="练习：文件编码转换"></a>练习：文件编码转换</h4><p>写法1：<br>使用python的with open语句完成文件编码转换，需要注意的是，如果f.read()运行完后指针会到最后，如果需要重复读取可以将其赋值为中间变量。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"><span class="keyword">import</span> chardet</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'cookie.txt'</span>,encoding=<span class="string">'gb2312'</span>,errors=<span class="string">'ignore'</span>,newline=<span class="string">'\r\n'</span>) <span class="keyword">as</span> f:</span><br><span class="line">	a = f.read()</span><br><span class="line">   <span class="keyword">with</span> open(<span class="string">'utf-8.txt'</span>,mode=<span class="string">'wb'</span>) <span class="keyword">as</span> g:</span><br><span class="line">       g.write(a.encode(<span class="string">'utf-8'</span>))</span><br></pre></td></tr></table></figure></p>
+<p>写法2：（读取写入均为字节，在中间转码。推荐使用这种方式，因为这种方式不需要处理换行问题。）：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"><span class="keyword">import</span> chardet</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'cookie.txt'</span>,mode = <span class="string">'rb'</span>) <span class="keyword">as</span> f:</span><br><span class="line">   a = f.read()</span><br><span class="line">   <span class="keyword">with</span> open(<span class="string">'utf-8.txt'</span>,mode=<span class="string">'wb'</span>) <span class="keyword">as</span> g:</span><br><span class="line">       g.write(a.decode(chardet.detect(a)[<span class="string">'encoding'</span>]).encode(<span class="string">'utf-8'</span>))</span><br></pre></td></tr></table></figure></p>
+<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><h3 id="使用post发送数据"><a href="#使用post发送数据" class="headerlink" title="使用post发送数据"></a>使用post发送数据</h3><h4 id="核心代码："><a href="#核心代码：" class="headerlink" title="核心代码："></a>核心代码：</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line">requestURL = <span class="string">'http://fanyi.youdao.com/translate'</span></span><br><span class="line">formData = &#123;</span><br><span class="line">    <span class="string">'i'</span>:<span class="string">'我爱你'</span>,</span><br><span class="line">    <span class="string">'from'</span>:<span class="string">'AUTO'</span>,</span><br><span class="line">    <span class="string">'to'</span>:<span class="string">'AUTO'</span>,</span><br><span class="line">    <span class="string">'smartresult'</span>:<span class="string">'dict'</span>,</span><br><span class="line">    <span class="string">'client'</span>:<span class="string">'fanyideskweb'</span>,</span><br><span class="line">    <span class="string">'salt'</span>:<span class="number">1539952880862</span>,</span><br><span class="line">    <span class="string">'sign'</span>:<span class="string">'3e6b698c9b9863f602a0eaab4cbdb567'</span>,</span><br><span class="line">    <span class="string">'doctype'</span>:<span class="string">'json'</span>,</span><br><span class="line">    <span class="string">'version'</span>:<span class="number">2.1</span>,</span><br><span class="line">    <span class="string">'keyfrom'</span>:<span class="string">'fanyi.web'</span>,</span><br><span class="line">    <span class="string">'action'</span>:<span class="string">'FY_BY_CLICKBUTTION'</span>,</span><br><span class="line">    <span class="string">'typoResult'</span>:<span class="string">'false'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">#urlencode方法将请求的data转换成URL编码的String转换标准格式，encode将string转换为bytes</span></span><br><span class="line">data = urllib.parse.urlencode(formData).encode(<span class="string">'utf-8'</span>)</span><br><span class="line">response = urllib.request.urlopen(requestURL,data)<span class="comment">#传递完格式的数据</span></span><br><span class="line">html = response.read().decode(<span class="string">'utf-8'</span>)<span class="comment">#读取信息并解码</span></span><br><span class="line">translate_results = json.loads(html)<span class="comment">#str→dict</span></span><br><span class="line">print(<span class="string">"翻译的结果是：&#123;&#125;"</span>.format(translate_results))</span><br></pre></td></tr></table></figure>
+<h4 id="新内容解释："><a href="#新内容解释：" class="headerlink" title="新内容解释："></a>新内容解释：</h4><h5 id="urllib-request-urlopen"><a href="#urllib-request-urlopen" class="headerlink" title="urllib.request.urlopen( )"></a>urllib.request.urlopen( )</h5><p>主要作用是使用默认的opener打开网页，建议设置timeout限制其最大读取时间<br>urllib.request.urlopen(url, data=None[, timeout ], cafile=None, capath=None, cadefault=False,<br>context=None)<br>Open the URL url, which can be either a string or a Request object.<br>data must be an object specifying additional data to be sent to the server, or None if no such data is<br>needed.</p>
+<h5 id="urllib-parse-urlencode-可传入dict-encode-‘utf-8’"><a href="#urllib-parse-urlencode-可传入dict-encode-‘utf-8’" class="headerlink" title="urllib.parse.urlencode(可传入dict).encode(‘utf-8’)"></a>urllib.parse.urlencode(可传入dict).encode(‘utf-8’)</h5><p>主要作用是将dict转换为url编码后的string，再将string转换为bytes供下一步调用，例如<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">formData = &#123;</span><br><span class="line">  <span class="string">'i'</span>:<span class="string">'我爱你'</span>,  </span><br><span class="line">  <span class="string">'from'</span>: <span class="string">'AUTO'</span>,</span><br><span class="line">&#125;</span><br><span class="line">data = urllib.parse.urlencode(formData).encode(<span class="string">'utf-8'</span>)</span><br><span class="line"><span class="string">b'i=%E6%88%91%E7%88%B1%E4%BD%A0&amp;from=AUTO'</span></span><br><span class="line"><span class="comment">#如果不加 str.encode('utf-8')，则返回</span></span><br><span class="line"><span class="string">'i=%E6%88%91%E7%88%B1%E4%BD%A0&amp;from=AUTO'</span></span><br></pre></td></tr></table></figure></p>
+<p>Convert a mapping object or a sequence of two-element tuples, which may contain str or bytes<br>objects, to a percent-encoded ASCII text string. If the resultant string is to be used as a data for<br>POST operation with the urlopen() function, then it should be encoded to bytes, otherwise it would<br>result in a TypeError.</p>
+<h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><h3 id="error异常处理"><a href="#error异常处理" class="headerlink" title="error异常处理"></a>error异常处理</h3><h4 id="核心代码：-1"><a href="#核心代码：-1" class="headerlink" title="核心代码："></a>核心代码：</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">   url = <span class="string">"http://www.baidu.com/lcl.html"</span></span><br><span class="line">   req = urllib.request.Request(url)</span><br><span class="line">   <span class="keyword">try</span>:</span><br><span class="line">       responese = urllib.request.urlopen(req)</span><br><span class="line">   <span class="keyword">except</span> urllib.error.HTTPError <span class="keyword">as</span> e:</span><br><span class="line">       print(e.code)</span><br><span class="line">   <span class="keyword">except</span> urllib.error.URLError <span class="keyword">as</span> e:</span><br><span class="line">       print(e)</span><br><span class="line">   <span class="keyword">else</span>:</span><br><span class="line">       print(<span class="string">'如果try中的部分成功了，运行这个'</span>)</span><br><span class="line">   <span class="keyword">finally</span>:</span><br><span class="line">       print(<span class="string">'无论是否成功，均运行这里'</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="新内容解释：-1"><a href="#新内容解释：-1" class="headerlink" title="新内容解释："></a>新内容解释：</h3><h4 id="try…except…except…else…finally"><a href="#try…except…except…else…finally" class="headerlink" title="try…except…except…else…finally"></a>try…except…except…else…finally</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    print(<span class="string">'先尝试运行这里'</span>)</span><br><span class="line"><span class="keyword">except</span> urllib.error.HTTPError <span class="keyword">as</span> e:</span><br><span class="line">    print(<span class="string">'再尝试运行这里'</span>)</span><br><span class="line"><span class="keyword">except</span> urllib.error.URLError <span class="keyword">as</span> e:</span><br><span class="line">    print(<span class="string">'然后尝试运行这里'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">   print(<span class="string">'如果try中的部分成功了，运行这个'</span>)</span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">   print(<span class="string">'无论是否成功，均运行这里'</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="URLError与HTTPError的关系"><a href="#URLError与HTTPError的关系" class="headerlink" title="URLError与HTTPError的关系"></a>URLError与HTTPError的关系</h4><p>urllib.error.URLError（处理此模块的所有异常）→衍生到子类→urllib.error.HTTPError（仅处理存在错误代码的HTTP出错信息，例如404(找不到页面)）。<br>如果想用HTTPError和URLError一起捕获异常，那么需要将HTTPError放在URLError的前面，因为HTTPError是URLError的一个子类。</p>
+<blockquote>
+<p>本部分主要参考资料：</p>
+<ol>
+<li><a href="https://blog.csdn.net/c406495762/article/details/58716886" target="_blank" rel="noopener">Jack_Gui的CSDN博客</a></li>
+<li>Python library reference_3.6.4</li>
+</ol>
+</blockquote>
+
       
     </div>
     
@@ -401,140 +413,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.imlcl.cn/2018/10/25/hello-world/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lcl">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/logo.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lcl's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/25/hello-world/" itemprop="url">Hello World</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-25T03:17:07+08:00">
-                2018-10-25
-              </time>
+              <a href="/2018/10/25/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -544,10 +444,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -555,6 +456,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -575,8 +480,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -652,6 +566,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一章"><span class="nav-number">1.</span> <span class="nav-text">第一章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#利用urllib进行简单的网页抓取"><span class="nav-number">1.1.</span> <span class="nav-text">利用urllib进行简单的网页抓取</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#核心代码"><span class="nav-number">1.1.1.</span> <span class="nav-text">核心代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#新内容解释"><span class="nav-number">1.1.2.</span> <span class="nav-text">新内容解释</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1、chardet："><span class="nav-number">1.1.2.1.</span> <span class="nav-text">1、chardet：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2、什么时候使用encode，什么时候使用decode"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">2、什么时候使用encode，什么时候使用decode?</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#练习：文件编码转换"><span class="nav-number">1.1.3.</span> <span class="nav-text">练习：文件编码转换</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二章"><span class="nav-number">2.</span> <span class="nav-text">第二章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用post发送数据"><span class="nav-number">2.1.</span> <span class="nav-text">使用post发送数据</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#核心代码："><span class="nav-number">2.1.1.</span> <span class="nav-text">核心代码：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#新内容解释："><span class="nav-number">2.1.2.</span> <span class="nav-text">新内容解释：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#urllib-request-urlopen"><span class="nav-number">2.1.2.1.</span> <span class="nav-text">urllib.request.urlopen( )</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#urllib-parse-urlencode-可传入dict-encode-‘utf-8’"><span class="nav-number">2.1.2.2.</span> <span class="nav-text">urllib.parse.urlencode(可传入dict).encode(‘utf-8’)</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三章"><span class="nav-number">3.</span> <span class="nav-text">第三章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#error异常处理"><span class="nav-number">3.1.</span> <span class="nav-text">error异常处理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#核心代码：-1"><span class="nav-number">3.1.1.</span> <span class="nav-text">核心代码：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新内容解释：-1"><span class="nav-number">3.2.</span> <span class="nav-text">新内容解释：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#try…except…except…else…finally"><span class="nav-number">3.2.1.</span> <span class="nav-text">try…except…except…else…finally</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#URLError与HTTPError的关系"><span class="nav-number">3.2.2.</span> <span class="nav-text">URLError与HTTPError的关系</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -792,6 +722,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
