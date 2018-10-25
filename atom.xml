@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://www.imlcl.cn/"/>
   <updated>2018-10-25T06:36:15.232Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://www.imlcl.cn/</id>
   
   <author>
     <name>Lcl</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>test123</title>
-    <link href="http://yoursite.com/2018/10/25/test123/"/>
-    <id>http://yoursite.com/2018/10/25/test123/</id>
+    <link href="http://www.imlcl.cn/2018/10/25/test123/"/>
+    <id>http://www.imlcl.cn/2018/10/25/test123/</id>
     <published>2018-10-24T19:50:00.000Z</published>
     <updated>2018-10-25T06:36:15.232Z</updated>
     
@@ -31,15 +31,15 @@
     
     </summary>
     
-      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+      <category term="python" scheme="http://www.imlcl.cn/categories/python/"/>
     
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2018/10/25/hello-world/"/>
-    <id>http://yoursite.com/2018/10/25/hello-world/</id>
+    <link href="http://www.imlcl.cn/2018/10/25/hello-world/"/>
+    <id>http://www.imlcl.cn/2018/10/25/hello-world/</id>
     <published>2018-10-24T19:17:07.607Z</published>
     <updated>2018-10-24T19:17:07.607Z</updated>
     
