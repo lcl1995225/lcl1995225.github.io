@@ -81,17 +81,17 @@
 
 
 
-<meta name="description" content="备注：教程均为网上收集，经过修改与整理使得更加符合LCL的阅读习惯。Lcl的习惯：章节号##，副标题###，其他事项#### 本教程总共分为以下几个部分：第一部分：使用urllib发送和处理简单请求第二部分：urllib+selenium利用cookie第三部分：beautifulSoup与正则表达式第四部分：高级爬虫（分布式与框架初探)">
+<meta name="description" content="备注：主要内容来自互联网，经过修改与整理使得更加符合LCL的阅读习惯。Lcl的习惯：章节号##，副标题###，其他事项#### 本教程可能分为以下几个部分：第一部分：使用urllib发送和处理简单请求第二部分：urllib+selenium利用cookie第三部分：beautifulSoup与正则表达式第四部分：高级爬虫（分布式与框架初探)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python爬虫笔记（一）_使用urllib发送和处理简单请求">
 <meta property="og:url" content="http://www.imlcl.cn/2018/10/25/Python爬虫笔记（一）-使用urllib发送和处理简单请求/index.html">
 <meta property="og:site_name" content="Lcl&#39;s Blog">
-<meta property="og:description" content="备注：教程均为网上收集，经过修改与整理使得更加符合LCL的阅读习惯。Lcl的习惯：章节号##，副标题###，其他事项#### 本教程总共分为以下几个部分：第一部分：使用urllib发送和处理简单请求第二部分：urllib+selenium利用cookie第三部分：beautifulSoup与正则表达式第四部分：高级爬虫（分布式与框架初探)">
+<meta property="og:description" content="备注：主要内容来自互联网，经过修改与整理使得更加符合LCL的阅读习惯。Lcl的习惯：章节号##，副标题###，其他事项#### 本教程可能分为以下几个部分：第一部分：使用urllib发送和处理简单请求第二部分：urllib+selenium利用cookie第三部分：beautifulSoup与正则表达式第四部分：高级爬虫（分布式与框架初探)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-25T19:34:05.947Z">
+<meta property="og:updated_time" content="2018-10-26T07:21:52.912Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python爬虫笔记（一）_使用urllib发送和处理简单请求">
-<meta name="twitter:description" content="备注：教程均为网上收集，经过修改与整理使得更加符合LCL的阅读习惯。Lcl的习惯：章节号##，副标题###，其他事项#### 本教程总共分为以下几个部分：第一部分：使用urllib发送和处理简单请求第二部分：urllib+selenium利用cookie第三部分：beautifulSoup与正则表达式第四部分：高级爬虫（分布式与框架初探)">
+<meta name="twitter:description" content="备注：主要内容来自互联网，经过修改与整理使得更加符合LCL的阅读习惯。Lcl的习惯：章节号##，副标题###，其他事项#### 本教程可能分为以下几个部分：第一部分：使用urllib发送和处理简单请求第二部分：urllib+selenium利用cookie第三部分：beautifulSoup与正则表达式第四部分：高级爬虫（分布式与框架初探)">
 
 
 
@@ -375,8 +375,8 @@
       
 
       
-        <p>备注：教程均为网上收集，经过修改与整理使得更加符合LCL的阅读习惯。<br>Lcl的习惯：章节号##，副标题###，其他事项####</p>
-<p>本教程总共分为以下几个部分：<br>第一部分：使用urllib发送和处理简单请求<br>第二部分：urllib+selenium利用cookie<br>第三部分：beautifulSoup与正则表达式<br>第四部分：高级爬虫（分布式与框架初探)<br><a id="more"></a></p>
+        <p>备注：主要内容来自互联网，经过修改与整理使得更加符合LCL的阅读习惯。<br>Lcl的习惯：章节号##，副标题###，其他事项####</p>
+<p>本教程可能分为以下几个部分：<br>第一部分：使用urllib发送和处理简单请求<br>第二部分：urllib+selenium利用cookie<br>第三部分：beautifulSoup与正则表达式<br>第四部分：高级爬虫（分布式与框架初探)<br><a id="more"></a></p>
 <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><h3 id="利用urllib进行简单的网页抓取"><a href="#利用urllib进行简单的网页抓取" class="headerlink" title="利用urllib进行简单的网页抓取"></a>利用urllib进行简单的网页抓取</h3><h4 id="核心代码"><a href="#核心代码" class="headerlink" title="核心代码"></a>核心代码</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line"><span class="keyword">import</span> chardet</span><br><span class="line">response = request.urlopen(<span class="string">"https://www.163.com/"</span>)</span><br><span class="line">html = response.read()<span class="comment">#读取出来的是bytes</span></span><br><span class="line">charset = chardet.detect(html)</span><br><span class="line">html = html.decode(charset[<span class="string">'encoding'</span>],errors=<span class="string">'ignore'</span>)</span><br></pre></td></tr></table></figure>
 <h4 id="新内容解释"><a href="#新内容解释" class="headerlink" title="新内容解释"></a>新内容解释</h4><h5 id="1、chardet："><a href="#1、chardet：" class="headerlink" title="1、chardet："></a>1、chardet：</h5><p>为第三方模块，可以检测byte的编码，若使用Anaconda，则已经自带，该模块可以用来自动判断网页编码的类型。<br>该模块在实际使用时偶尔会碰到问题，即无法检测部分网页的编码，如<a href="https://www.qq.com" target="_blank" rel="noopener">腾讯主页</a></p>
 <h5 id="2、什么时候使用encode，什么时候使用decode"><a href="#2、什么时候使用encode，什么时候使用decode" class="headerlink" title="2、什么时候使用encode，什么时候使用decode?"></a>2、什么时候使用encode，什么时候使用decode?</h5><p>str—&gt;(encode，编码)—&gt;bytes（二进制）<br>bytes（二进制）—&gt;(decode，解码)—&gt;str<br>助记：将字符编码为计算机理解的二进制语言。<br>举例：<br>str(小明abc）—&gt;str.encode(‘utf-8’,errors=’ignore’)—&gt;bytes（b’\xe5\xb0\x8f\xe6\x98\x8eabc’ 小明abc）<br>bytes（b’\xe5\xb0\x8f\xe6\x98\x8eabc’ 小明abc）—&gt;str.decode(‘utf-8’,errors=’ignore’)—&gt;str(小明abc）</p>
